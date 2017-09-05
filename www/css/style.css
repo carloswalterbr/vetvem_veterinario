@@ -1,0 +1,246 @@
+	.bar.bar-stable {
+		border-color: transparent;
+		background-color: #ff9500;
+		color: #fff; }
+	.bar.bar-stable .title {
+		color: #fff; }	
+	.bar-stable .button.button-clear {
+		border-color: transparent;
+		background: none;
+		box-shadow: none;
+		color: #fff;
+		font-size: 17px; }	
+	.bar-stable .button {
+	  border-color: #b2b2b2;
+	  background-color: #f8f8f8;
+	  color: #fff; }
+
+	.bar.title {
+		border-color: transparent;
+		background-color: #ff9500;
+		color: #fff;
+		text-align: center;		}
+		
+  .bar .buttons.secondary-buttons {
+	color: #fff; }
+		
+.logo-text-body { text-align: center;}		
+		
+	/*--- custom is class added to ion-content ---*/
+	 /* This sets the background color*/
+	.fundo { background-color: #efefef/*3f4041*/ !important;  }	 	
+	.custom { background-color: #ff9500 !important; color:#fff; }	 
+	.cinza  { background-color: #efefef !important; color:#333; }	 
+	.cinza2  { background-color: #efefef !important; color:#fff; }	 
+	.red  { color:red; }	 
+	.green  { color:green; }	 
+	.green2  { color:#009900; }	 
+	.blue  { color:blue; }	 
+	.grey  { color:#777; }	 
+	.lightgray  { color:#aaa; }
+	.orangecustom  { color:#ff9500; }	 
+	.center {text-align:center}
+	.left {text-align:left}
+	.right {text-align:right}
+	.complemento {font-size:3vmin}
+	a.noline:link {text-decoration:none;color:#333;}
+	a.noline:visited {text-decoration:none;color:#333;}
+	.f25 {font-size: 2.5vmin}
+	.f35 {font-size: 3.5vmin}
+	.f50 {font-size: 5vmin}
+	.f60 {font-size: 6vmin}
+	.f70 {font-size: 7vmin}
+	
+	/* Set the background to transparent for ion-item */
+	.custom .item {
+	  background-color: transparent;
+	  border:none;   /*Removes all borders*/
+	  border-top: 1px solid;   /*Top Border for each menu item*/ 
+	  border-bottom:1px solid;   /*Bottom border for each menu item*/
+	  border-color: #fff/*666*/;   /*Sets colors for top and bottom border*/
+	  color: white;    /*Text color for each item*/
+	}
+	 
+	/* Changes the border for the last item */
+	.custom .item:last-child {
+	  border-bottom: 1px solid #fff/*666*/;
+	}
+	 
+	.custom .item-complex .item-content, .dark .item-radio .item-content {
+	  background-color: transparent;
+	}
+	 
+	/*Just makes the type white*/
+	.custom h2,
+	.custom h3,
+	.custom p,
+	.custom a {
+	  color: white;  /*Text color for each item, overrides the color property above*/
+	}	  
+
+	a.noline:link {text-decoration:none;color:#333;}
+	a.gray:link {color:#333;}
+	
+	.m2 {right:0; top:0;position:absolute; padding-top:13vmin; padding-right:15vmin; font-size:3vmax; color:#ff9500; }  
+	.m3 {right:0; top:0;position:absolute; padding-top:11vmin; padding-right:15vmin;  font-size:3vmax; color:#ff9500; }  
+	.tvert  {right:0; top:10px;position:absolute; padding-top:24vmin; padding-right:34vmin; border-left:1px solid #ff9500;} 
+	.tvert3{right:0; top:10px;position:absolute; padding-top:28vmin; padding-bottom:24vmin; padding-right:34vmin; border-left:1px solid #ff9500;}
+	.avatar {width:25vmin; height:25vmin; border-radius: 50%;-webkit-border-radius: 50%; -moz-border-radius: 50%;border: 2px solid #ff9500;}
+	.bigavatar {width:30vmin; height:30vmin; border-radius: 50%;-webkit-border-radius: 50%; -moz-border-radius: 50%;border: 2px solid #ff9500;}
+	.wrapword{
+		white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+		white-space: -pre-wrap;      /* Opera 4-6 */
+		white-space: -o-pre-wrap;    /* Opera 7 */
+		white-space: pre-wrap;       /* css-3 */
+		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+		white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+		word-break: break-all;
+		white-space: normal;}
+	.inputserv {border: border: 1px solid #999; max-width:20vmin; max-height:3.5vmax}
+	.select95 {padding:2.45%; width:95%}
+	.select95a {padding:2.45%; }
+	.txtvertalign {font-size:4vmin; color:#000; height: 10vmax;line-height: 10vmax;}
+	
+	/* portrait */
+	@media screen and (orientation:portrait) {
+		/* portrait-specific styles */
+		.txtvertalign2 {font-size:4vmin; color:#000; height: 5vmax;line-height: 5vmax;} 
+	}
+	/* landscape */
+	@media screen and (orientation:landscape) {
+		/* landscape-specific styles */
+		.txtvertalign2 {font-size:4vmin; color:#000; height: 10vmax;line-height: 10vmax;}
+	}	
+	
+	.col-list1 {
+	  -webkit-box-flex: 0;
+	  -webkit-flex: 0 0 68%;
+	  -moz-box-flex: 0;
+	  -moz-flex: 0 0 68%;
+	  -ms-flex: 0 0 68%;
+	  flex: 0 0 68%;
+	  max-width: 68%; }
+	
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://css/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(https://css/MaterialIcons-Regular.woff2) format('woff2'),
+       url(https://css/MaterialIcons-Regular.woff) format('woff'),
+       url(https://css/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/*
+	.item-avatar  {     
+		width:100% !important;  
+		height : 100% !important;  
+		max-width: 100vmin !important;  //any size
+		max-height: 100px !important; //any size 
+	}
+*/
+	
+.item-avatar2,
+.item-avatar2 .item-content,
+.item-avatar2-left,
+.item-avatar2-left .item-content {
+  padding-left: 80px;
+  min-height: 62px; }
+  .item-avatar2 > img:first-child,
+  .item-avatar2 .item-image,
+  .item-avatar2 .item-content > img:first-child,
+  .item-avatar2 .item-content .item-image,
+  .item-avatar2-left > img:first-child,
+  .item-avatar2-left .item-image,
+  .item-avatar2-left .item-content > img:first-child,
+  .item-avatar2-left .item-content .item-image {
+    position: absolute;
+    top: 22px;
+    left: 16px;
+    max-width: 65px;
+    max-height: 65px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+.item-avatar2-right,
+.item-avatar2-right .item-content {
+  padding-right: 72px;
+  min-height: 72px; }
+  .item-avatar2-right > img:first-child,
+  .item-avatar2-right .item-image,
+  .item-avatar2-right .item-content > img:first-child,
+  .item-avatar2-right .item-content .item-image {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+.item-avatar2.item-complex,
+.item-avatar2-left.item-complex {
+  padding-top: 0;
+  padding-left: 0; }
+  
+
+/* Bits */
+
+.fundoCinza {background-color: #efefef}
+
+/* Walter */
+/*-------------------------------*/
+.social-actionsheet .action-sheet 
+{
+    text-align: center !important;
+	font-size:20px;
+}
+.social-actionsheet .action-sheet .button
+{
+    background-color:#0076cd;
+	color:#fff;
+	padding: 10px;
+    text-align: center !important;
+	font-size:20px;
+}
+.social-actionsheet .action-sheet .button .text-action
+{
+    /*
+	font-size:4vmin;
+	margin-left: 30px;
+	*/
+	text-align: center !important;
+}
+.social-actionsheet .action-sheet .button .text-width
+{
+    /*margin-left: 50px;*/
+	text-align: center !important;
+}

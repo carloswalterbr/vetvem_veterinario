@@ -1,0 +1,24 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+	
+	<div class="list" >
+		<a class="item item-avatar2 item-icon-right" ng-repeat="med in data" href="#/app/agendar/{{num}}/{{med.num}}"> 
+		  <img src="{{med.image}}" >
+		  <div class="row">
+				<div class="col col-list1" >
+				  <p style="; color:#fba919;">{{med.nome}} </p>  
+				  <h4>{{med.spec}}</h4>
+				  <h4><span style="; color:#888;">{{med.end}}</span></h4> 
+					<span class="tvert"> </span>
+				</div>
+				<div class="col">
+					<span class="m2"> {{med.valor}} </span>
+				</div>
+			</div>
+			  <span style="color:#999"> <i class="icon ion-ios-arrow-right"></i> </span>
+		</a>
+	</div>	
+		
+		<!--{{tipo}}-{{num}}-->
+  </ion-content>
+</ion-view>

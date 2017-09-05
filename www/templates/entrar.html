@@ -1,0 +1,91 @@
+﻿<ion-view view-title={{pagetitle}} hide-nav-bar="true">
+  <ion-content class="">
+<!--<img src="img/fundo.png" style="z-index: -1; width: 100%; position: absolute;"> -->
+	<div style="width:100%;  text-align:center;">
+		<div ng-click="closeLogin()">
+			<img src="img/Logomarca1.png" style="width:100%; padding-top:50px; padding-left:50px; padding-right:50px; padding-bottom:50px;" > 
+		</div>
+	</div>
+	<div style="width:100%; height:100%;text-align:left"> 
+		<br/>	 
+		<form name="myForm" ng-submit="doLogin()">
+		  <div class="" style="padding:10%">
+			<label class="item item-input">
+			  <input type="email" placeholder="Login" ng-model="loginData.username" > 
+			</label>
+			<label class="item item-input">
+			  <input type="password" placeholder="Senha" ng-model="loginData.password" required>
+			</label>
+			<label class="item">
+				<div class="center grey" ng-show="loading"><br/><i class="fa fa-spinner fa-pulse fa-2x" aria-hidden="true"></i></div>
+			  <button class="button button-block custom" type="submit"
+			   ng-disabled="(!myForm.$valid||myForm.$error.required)">ENTRAR</button>
+			</label>
+			<br/>
+			<div style="text-align:center">
+				<!--<span ng-click="cadastro()"> Cadastre-se</span>&nbsp;&nbsp;|&nbsp;&nbsp;-->
+				<span ng-click="esqueci()"> Esqueci minha senha </span>
+			</div>
+			<br/>
+			<a href="#/app/cadastro1" class="noline">
+			  <button class="button button-block custom" type="button" >Criar Conta</button>
+			</a>
+		  </div>
+		</form>
+	</div>
+<!------------------------------------------------------------------------------------------------------------------------------->
+	<ion-modal-view ng-show="cadshow">
+		<ion-header-bar class="custom">
+		<div class="buttons">
+			<button class="button custom" ng-click="closecad()"><i class="fa fa-chevron-left" style="color:#fff" ></i></button >
+		<div style="text-align:center"> <h1 class="title custom">Criar Conta</h1> </div>
+		</div>		
+		</ion-header-bar>
+
+		<ion-content>
+		<form ng-submit="doCadastro()">
+		  <div class="" style="padding:10%">
+			<label class="item item-input">
+			  <input type="text" placeholder="Nome" ng-model="loginData.nome"> 
+			</label>
+			<label class="item item-input">
+			  <input type="date" placeholder="Data Nasc." ng-model="loginData.nascimento"> 
+				<i class="fa fa-calendar " style="color:#777"  ></i>&nbsp;&nbsp;&nbsp;
+			</label>
+			<label class="item item-input">
+			  <input type="text" placeholder="Celular" ng-model="loginData.telefone"> 
+			</label>
+			<label class="item item-input">
+			  <input type="text" placeholder="Endereço" ng-model="loginData.endereco"> 
+			</label>
+			<label class="item item-input">
+			  <input type="text" placeholder="CEP" ng-model="loginData.cep"> 
+			</label>
+			<label class="item item-input"> 
+			  <input type="text" placeholder="Cidade" ng-model="loginData.cidade"> 
+			</label>
+			<label class="item item-input">
+			  <input type="text" placeholder="Estado" ng-model="loginData.uf"> 
+			</label>
+			<label class="item item-input">
+			  <input type="password" placeholder="Senha" ng-model="loginData.password">
+			</label>
+			<label class="item item-input">
+			  <input type="password" placeholder="Repita a senha" ng-model="loginData.password2">
+			</label>
+			<label class="item">
+			<div style="text-align:center;font-size: 2.5vmin; color:#777"> 
+				Ao fazer o seu cadastro você concorda com <br/>os nossos Termos de Uso.
+			</div>
+			  <!--<button class="button button-block custom" type="submit">CADASTRAR</button>-->
+			  <button class="button button-block custom" type="button" ng-click="fecha()">CADASTRAR</button>
+			</label>
+			<br/>
+			<br/>
+		  </div>
+		</form>
+		</ion-content>
+	</ion-modal-view>
+	
+  </ion-content>
+</ion-view>

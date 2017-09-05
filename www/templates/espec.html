@@ -1,0 +1,16 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+	
+	<div class="list" >
+		<div class="item item-divider center"> Escolha a Especialidade </div>	
+		<a class="item item-icon-right " ng-repeat="espec in data" href="#/app/atend/consulta/{{espec.num}}">
+			<span class="orangecustom">{{espec.nome}} </span >
+			<br/>
+			<span class="grey complemento">{{espec.desc}} </span >
+			<span style="color:#999"> <i class="icon ion-ios-arrow-right"></i> </span>
+		</a>
+	</div>	
+		
+		
+  </ion-content>
+</ion-view>

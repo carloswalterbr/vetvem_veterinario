@@ -1,0 +1,86 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content>
+<!-- imagem de fundo -->
+	<div style="width: 100%; text-align:center;">
+		<img src="img/bgimg_03.png" style="width: 100%; z-index: -1; position: absolute; right: 0vw">
+		<div style="position: relative;">
+			<div style="height: 12.33vw"></div>
+			<div style="position: relative;">
+			<a menu-close href="#/app/perfil">
+				<img id="myImage" class="avatar" src="{{foto}}" style="width: 50vw; height: 50vw" > 
+				<span style="right:0; top:0;position:absolute; padding-top:3vmin; padding-right:3vmin;">
+				</span>
+				</a>
+			</div>
+<!-- 		<span style="font-size: 5vmin"> {{nome}} </span>
+			<span style="color:#777"> {{end}} </span>
+			<span id="tc"></span> 
+-->			<div style="height: 1.5vw"></div>
+			<span style="font-size: 5vmin; color: white"> {{nome}} </span>
+			<span id="tc"></span>
+		</div>
+	<!-- /imagem de fundo -->
+	<div style="height: 4vw"></div>
+	<div style="width:100%; background-color:#fff; text-align:center">
+	<div style="height: 4vw"></div>
+		<div class="row ">
+			<div class="col"  style="text-align:center" >
+				<div style="padding-left: 7.5vw">
+					<div style="border: 1px solid grey; border-radius: 15%; box-shadow: 2px 2px 2px #bababa; width: 30vw ;height:30vw;">
+						<a href="#/app/calendar" class="noline">
+							<div>
+								<div style="height: 4vw"></div>
+								<img src="img/ico1.png" style="width:15vmin"> 
+							</div>
+						</a>
+							Agenda
+					</div>
+				</div>
+			</div>
+			<div class="col" style="text-align:center">
+				<div style="padding-left: 7.5vw">
+					<div style="border: 1px solid grey; border-radius: 15%; box-shadow: 2px 2px 2px #bababa; width: 30vw ;height:30vw;">
+						<a href="#/app/pendentes" class="noline">
+							<div>
+								<div style="height: 4vw"></div>
+								<img src="img/ico8.png" style="width:15vmin"> 
+							<span ng-show="aconfirmar" class="badge badge-assertive f25" style="parent.top:0;right:5;position:absolute">{{qtde}}</span> 
+							</div>
+						</a>
+						Pendentes
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col" style="text-align:center">
+			<div style="padding-left: 7.5vw">
+				<div style="border: 1px solid grey; border-radius: 15%; box-shadow: 2px 2px 2px #bababa; width: 30vw ;height:30vw;">
+					<a href="#/app/servicos" class="noline">
+						<div>
+						<div style="height: 4vw"></div>
+						<img src="img/ico4.png" style="width:15vmin"> 
+						</div>
+					</a>
+						Serviços
+				</div>
+			</div>
+		</div>
+			<div class="col" style="text-align:center">
+				<div style="padding-left: 7.5vw">
+					<div style="border: 1px solid grey; border-radius: 15%; box-shadow: 2px 2px 2px #bababa; width: 30vw ;height:30vw;">
+						<a href="#/app/cliente" class="noline">
+							<div>
+								<div style="height: 4vw"></div>
+								<img src="img/ico7.png" style="width:15vmin"> 
+							</div>
+						</a>
+						Clientes
+				</div>
+			</div>
+		</div>
+
+	</div>
+  
+  </ion-content>
+</ion-view>

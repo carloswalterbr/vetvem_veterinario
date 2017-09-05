@@ -1,0 +1,92 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+	
+	<div id="map">
+		Aguardando Google Maps <i class="fa fa-spinner fa-pulse " aria-hidden="true"></i>
+	</div>
+	
+	<div class="list" >
+		<div class="item item-avatar2"> 
+		  <img class="avatar" src="{{host+data[0].str_cli_image}}" >
+		  <div class="row">
+				<div class="col" >
+					  <p>
+						<span style="font-size:5vmin; color:#fba919;">{{data[0].str_cli_nome}} </span>| 
+						<span style=" font-size:3vmin; color:#000">{{dh(data[0].datahora) | date: 'dd/MM HH:mm'}} </span> 						
+					  </p>
+					<span style="font-size:3vmin; color:#777">
+						{{data[0].str_cli_address}}
+					</span>
+					<span style="font-size:3vmin; color:#777">
+						{{data[0].str_cli_cidade}}
+					</span>
+					<br/>
+					
+					<span style="font-size:3.5vmin; color:#{{cor(data[0].int_status_id)}}">
+						<i class="fa fa-medkit fa-flip-horizontal" aria-hidden="true"></i>
+						{{texto}} 
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="item"> 
+			<span style="font-size:5vmin; color:#fba919; padding:6%">Serviços </span></br>
+			
+			<div class="row" ng-repeat="serv in data">
+				<div class="col" style="max-width:25vmin" >
+					<img src="{{tiposerv(serv.int_ss_tipo)}}" style="width:20vmin; padding-left:6%">
+				</div>
+				<div class="col" >
+					<br/>
+					<span style="font-size:4vmin; color:#000">{{nomeserv}} | </span>
+					<span style="font-size:4vmin; color:#fba919">R$ {{serv.flo_ss_preco}} </span><br/>
+					<span style="font-size:3vmin; color:#777"> {{serv.str_ss_descricao}} </span>				
+				</div>
+			</div>
+			
+
+		</div>
+		
+		<div class="item" style="font-size:4vmin;"> 
+			<span style="font-size:5vmin; color:#fba919; padding:6%">Detalhes </span></br>
+			<div class="row">
+				<div class="col" style="max-width:45vmin" >
+					<span style=" color:#000">Pagamento em Dinheiro</span>
+				</div>
+				<div class="col right" >
+					<span style=" color:#000">Total | </span><span style=" color:#fba919">R$ {{total.toFixed(2)}} </span><br/>
+				</div>
+			</div>
+		</div>
+		<div ng-show="showAceitar"> 
+			<div class="item"> 
+				<span style="font-size:4vmin; color:#fba919; padding:4%">Tempo para aceitar </span></br>
+				<div class="row">
+					<div class="col" style="max-width:40vmin" >
+						
+					</div>
+					<div class="col right" >
+						<span style="font-size:10vmin; color:#999">{{aceitar}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="item"> 
+				<div class="row">
+					<div class="col" style="max-width:50vmin" >
+						<button class="button button-block custom" type="button" ng-click="aceita(1)">ACEITAR</button>
+					</div>
+	<!--
+			Aqui falta colocar as funções certas no campo ng-click dos botões.
+	-->
+					<div class="col" >
+						<button class="button button-block custom" type="button" ng-click="aceita(4)">NEGAR</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		
+  </ion-content>
+</ion-view>

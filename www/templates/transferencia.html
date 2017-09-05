@@ -1,0 +1,52 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+	<div class="list" >
+		<div class="item item-avatar2"> 
+		  <img class="avatar" src="{{foto}}" >
+		  <div class="row">
+				<div class="col" >
+				  <p>
+					<span style="font-size:5vmin; color:#fba919;">Titular da Conta </span><br/>
+					<span style="font-size:4vmin; color:#999">{{nome}}</span><br/>
+					<span style="font-size:3.5vmin; color:#999">CPF {{transf.str_vet_cpf}} </span>
+				  </p>
+				</div>
+			</div>
+		</div>
+		<div class="item"> 
+		<span style="color:#fba919; font-size:5vmin">Selecione a Conta</span>
+			<div class="row">
+				<div class="col" style="min-width:54.25vmin" >
+					<input type="checkbox" checked>
+					<span class="f35" style=" color:#000"> {{transf.str_vet_banco}}</span>
+				</div>
+				<div class="col f35" style="border-left: 1px solid #888" >
+						<span>Agência: {{transf.str_vet_agc}}</span><br/>
+						<span>Conta: {{transf.str_vet_cc}}</span><br/>
+				</div>
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="row">
+				<div class="col" style="min-width:60vmin">
+					<span style="color:#fba919; font-size:5vmin">Valor de Transferência</span>
+				</div>
+				<div class="col" style="max-width:5vmin" >
+					<span style="font-size:3vmin; color:#000">R$ </span>
+				</div>
+				<div class="col" >
+					<input id="val" type="number" style="border: 1px solid black; max-width:20vmin; max-height:3.5vmax " 
+					placeholder="" ng-model="valor" formatamoeda> 
+				</div>
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="center" style="padding:5%" >
+				<button class="button button-block custom" type="button" ng-click="transferir()">CONTINUAR</button>
+			</div>
+		</div>
+	</div>
+	
+		
+  </ion-content>
+</ion-view>

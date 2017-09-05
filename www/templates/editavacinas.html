@@ -1,0 +1,23 @@
+﻿<ion-view view-title={{pagetitlevac}}>
+  <ion-content class="">
+  
+	<div style="padding: 0 5% 0 5%">
+		<div class="row" 	style="border-bottom:1px solid #999; padding-top:4%"
+							ng-repeat="v in vacinas | filter:{int_vac_especie:tipo} | filter:decimal2comma track by v.int_vac_id " > 
+			<div class="col">  
+				<input type="checkbox" ng-model="v.status" >
+			</div>
+			<div class="col wrapword" >  
+				{{v.str_vac_nome}}	
+			</div>
+			<input type="tel" style="border: 1px solid #bbb; max-width:20vmin; max-height:4vmax " 
+				ng-model="v.flo_vac_preco" formatamoeda>
+		</div>				
+	</div>
+	<div class="item" style="padding: 0 5% 0 5%"> 
+				<button class="button button-block custom" type="button" ng-click="gravavacinas()">SALVAR</button>
+	</div>
+	
+		
+  </ion-content> 
+</ion-view>

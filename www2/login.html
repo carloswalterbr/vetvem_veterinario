@@ -1,0 +1,170 @@
+﻿<ion-view view-title={{pagetitle}} data-ng-init="leuserdata()" hide-nav-bar="true">
+  <ion-content class="">
+	<div style="width:100%;  text-align:center">
+		<br/>
+		<div ng-click="home()">
+			<img src="img/img_login2.png" style="width:100%" > 
+		</div>
+	</div>
+	<div style="width:100%;  background-color:#efefef; text-align:left"> 
+			 
+		<form name="myForm" ng-submit="doLogin()" >
+		  <div class="" style="padding:10%">
+			<label class="item item-input">
+			  <span class="input-label">Login</span>
+			  <input type="text" id="login" name="login" ng-model="logindata.username" placeholder="insira o seu login" required  > 
+			</label>
+			<label class="item item-input">
+			  <span class="input-label">Senha</span>
+			  <input type="password" ng-model="logindata.password" placeholder="insira a sua senha" required>
+			</label>
+			<!--<label class="item">-->
+			  <button class="button button-block custom" type="button" ng-disabled="(!myForm.$valid||myForm.$error.required)">ENTRAR</button>
+			<!--</label>-->
+			
+			<br/>
+			<div style="text-align:center">
+				<a href="#/app/cadastro" class="noline"> Cadastre-se</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp; 
+				<span ng-click="esqueci()"> Esqueci minha senha</span>
+			</div>
+			<div > 
+			  <button class="button button-block button-assertive icon-left ion-social-googleplus" >
+			  Cadastre-se com Google+
+			  </button>
+			  <button class="button button-block button-positive icon-left ion-social-facebook" ng-click="nada()"> 
+			  Cadastre-se com Facebook	  
+			  </button>
+			</div>
+		  </div>
+		</form>
+
+	</div>
+
+	
+	
+	
+  </ion-content>
+</ion-view>
+
+
+<!--
+	<p>
+	  <button ng-click="openPopover($event)">Open Popover</button>
+	</p>
+
+	<script id="my-popover.html" type="text/ng-template">
+	  <ion-popover-view>
+		<ion-header-bar>
+		  <h1 class="title">My Popover Title</h1>
+		</ion-header-bar>
+		<ion-content>
+		  Hello!
+		</ion-content>
+	  </ion-popover-view>
+	</script>
+	
+        <section style="margin: 5vmin;">
+            </p>
+            <div style="text-align: center; margin-top: 5vmax;">
+                <img src="images/splash.png" width="20%" height="auto">
+                <br/>
+                <span class="f50"> STRAPP </span>
+            </div>
+            <form name="myForm" >
+            <div style="text-align: center; ">
+                <br/>
+                <p>
+                  <ons-input id="username" name="username" modifier="underbar" placeholder="{{page_text.name}}" float 
+                  ng-model="username" required pattern=".{3,}"
+                  style=" width: 90%; font-size: 3vmax;"></ons-input>
+                </p>
+                <div class="error" style="color:red;font-size: 2vmax;" ng-show="myForm.username.$invalid ">
+                {{page_text.nameerr}}</div>                
+                <br/>
+                <p>
+                  <ons-input id="username" name="username"  modifier="underbar" placeholder="{{page_text.email}}" float type="email" 
+                    ng-model="usermail" required 
+                    style=" width: 90%; font-size: 3vmax;"></ons-input>
+                  <span class="error" ng-show="myForm.$error.email" style="color:red;font-size: 2vmax;">
+                  <br/>{{page_text.emailerr}}</span>
+                </p>
+                <br/>
+                <br/>
+                <ons-row>
+                    <ons-col>
+                      <ons-input id="pwd" name="pwd" modifier="underbar" type="password" 
+                      ng-model="pwd" 
+                      placeholder="{{page_text.password}}" float  required pattern=".{6,}" style=" width: 80%;"></ons-input>
+                    <div style="color:red;font-size: 2vmax;" ng-show="myForm.pwd.$invalid ">{{page_text.passworderr}}</div>
+                    </ons-col>  
+                    <ons-col>
+                      <ons-input id="pwd2" name="pwd2" modifier="underbar" type="password" placeholder="{{page_text.repeatpassword}}" float  
+                      pattern=".{6,}" ng-model="pwd2" style=" width: 80%;"></ons-input>
+                    <div style="color:red;font-size: 2vmax;" ng-show="(pwd!=pwd2) ">{{page_text.passworderr2}}</div>                                      
+                    </ons-col>  
+                </ons-row>
+                <br/>
+                <ons-row>
+                    <ons-col>
+                        <div style="text-align:left;margin-left: 5vmin;" ng-click="gender()"> 
+                            {{page_text.gender}}: {{usergender}} &nbsp;<i class="fa fa-{{usergender}} fa-1g"></i>
+                        </div>
+                    </ons-col>
+                    <ons-col>
+                        <p>
+                        <div ng-hide="showbirthday" ng-click="birthday()" style="text-align: left;margin-left: 5vmin;"> 
+                        {{page_text.birthday}}: {{userbirthday}}</div>
+                        <div ng-show="showbirthday">
+                          <ons-input id="birthday" name="birthday" modifier="underbar" ng-model="userbirthday"
+                          placeholder="{{page_text.birthday}}" float type="date" required
+                          style=" width: 80%; font-size: 3vmax;"></ons-input>
+                        </div>
+                        <div style="color:red;font-size: 2vmax;" ng-show="(userbirthday=='') ">{{page_text.birthdayerr}}</div>                                      
+                        </p>
+                    </ons-col>
+                </ons-row>
+                <br/>
+                <p style="margin-top: 5vmax;text-align: center; font-size: 3vmax;"">
+                  <ons-button  ng-click="submit()" ng-disabled="(!myForm.$valid||myForm.$error.required||(pwd!=pwd2))" style="width: 45%;">
+                  OK</ons-button>
+                  <span class="error" ng-show="myForm.$error.required"  style="color:red;font-size: 2vmax;">
+                    <br/>{{page_text.globalerr}}</span>                  
+                </p>
+                
+                {{userbirthday}}<br/>
+                <tt>text = {{usermail}}</tt><br/>
+                <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
+                <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
+                <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
+                <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
+                <tt>myForm.$error.email = {{!!myForm.$error.email}}</tt><br/>                
+                
+                
+            </div>       
+            </form>
+        </section>
+        
+        <div ng-show="loginerro">
+            <div class="alert-dialog-mask"></div>
+            <div class="alert-dialog">
+            <div class="alert-dialog-title"  > {{alert_title}}<br/></div>
+            <div id="alert-content" class="alert-dialog-content" ng-show="(alert_content!='')"> {{alert_content}} </div>
+            <div ng-show="showinput">
+                <section style="margin: 10px;">
+                  <input ng-model="input_data" type="text" ng-show="showinput" placeholder="{{input_placeholder}}" class="text-input text-input--transparent " style="margin-top:8px; width: 100%;" />
+                </section>
+            </div>
+              <button class="alert-dialog-button" ng-click="alertbt1()" ng-show="(alert_button_text1!='')">{{alert_button_text1}}</button>
+              <button class="alert-dialog-button" ng-click="alertbt2()" ng-show="(alert_button_text2!='')">{{alert_button_text2}}</button>
+              <button class="alert-dialog-button" ng-click="alertbt3()" ng-show="(alert_button_text3!='')">{{alert_button_text3}}</button>
+            
+              <div class="alert-dialog-footer">
+                <div id="alert-footer" class="alert-dialog-content" ng-show="(alert_footer!='')">{{alert_footer}}</div>
+                <button class="alert-dialog-button alert-dialog-button--primal" 
+                    ng-click="alertoff()" ng-show="(alert_button_footer!='')">
+                {{alert_button_footer}}</button>
+            </div>
+        </div>
+
+-->

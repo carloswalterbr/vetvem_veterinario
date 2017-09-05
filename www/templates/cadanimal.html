@@ -1,0 +1,36 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+	<div style="width:100%; background-color:#efefef; text-align:center">
+		<br/>
+		<div ng-click="mudarfoto()">			
+			<img src="img/MolduraFoto.jpg" style="width:25vmin"> 
+		</div>
+		<br/>
+	</div>
+	
+	<form ng-submit="doCadastro()">
+	  <div class="" style="padding:10%">
+		<label class="item item-input">
+		  <input type="text" placeholder="Nome" ng-model="loginData.nome">   
+		</label>
+		<label class="item item-input">
+		  <input type="text" placeholder="Espécie" ng-model="loginData.especie">   
+		</label>
+		<label class="item item-input">
+		  <input type="text" placeholder="Raça" ng-model="loginData.raca"> 
+		</label>
+		<label class="item item-input">
+		  <input type="number" placeholder="Idade" ng-model="loginData.idade"> 
+		</label>
+		<label class="item item-input">
+		  <input type="number" placeholder="Peso" ng-model="loginData.peso"> 
+		</label>
+		  <!--<button class="button button-block custom" type="submit">SALVAR</button>-->
+		  <button class="button button-block custom" type="button" ng-click="fecha()">SALVAR</button>
+		</label>
+		<br/>
+		<br/>
+	  </div>
+	</form>
+  </ion-content>
+</ion-view>

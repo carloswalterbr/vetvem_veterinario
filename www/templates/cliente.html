@@ -1,0 +1,42 @@
+<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+	
+	<!-- lista de clienteações -->
+	<div class="list" >
+		<a class="item item-avatar2 item-icon-right" 
+            ng-repeat="cliente in data track by $index" 
+            href="#/app/detalhesConsulta/{{cliente.int_sol_id}}"> 
+		  <img class="avatar" src="{{host+cliente.str_cli_image}}" >
+		  <div class="row">
+				<div class="col" >
+				  <p>
+					<span style="font-size:5vmin; color:#fba919;">{{cliente.str_cli_nome}} </span>
+					<!--
+					| {{dh(cliente.dt_sol_datahora) | date: 'dd/MM HH:mm'}}
+					-->
+					<br/>
+					<span style=" font-size:3vmin; color:#000">{{dh(cliente.datahora) | date: 'dd/MM HH:mm'}} </span> 
+				  </p>
+				<span style="font-size:3vmin; color:#777">
+					{{cliente.str_cli_address}}
+				</span>
+				<span style="font-size:3vmin; color:#777">
+					{{cliente.str_cli_cidade}}
+				</span>
+				<br/>
+				
+				<span style="font-size:3.5vmin; color:#{{cor(cliente.int_status_id)}}">
+					<i class="fa fa-medkit fa-flip-horizontal" aria-hidden="true"></i>
+					{{texto}} 
+				</span>
+
+				  
+
+				</div>
+			</div>
+			  <span style="color:#999"> <i class="icon ion-ios-arrow-right"></i> </span>
+		</a>
+	</div>	
+		
+  </ion-content>
+</ion-view>

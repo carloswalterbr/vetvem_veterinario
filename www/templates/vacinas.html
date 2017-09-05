@@ -1,0 +1,21 @@
+﻿<ion-view view-title={{pagetitle}}>
+<ion-nav-buttons side="secondary ">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon  "></button>
+</ion-nav-buttons>
+  
+  
+  <ion-content class="cinza">
+	<div class="list" >
+		<!--<a class="item item-icon-right" ng-repeat="vacina in data" href="#/app/atend/{{vacina.nome}}/{{vacina.num}}"> 	-->
+		<a class="item item-icon-right" ng-repeat="vacina in data" ng-click="go(vacina.nome,vacina.num)">
+		  <p><strong>{{vacina.nome}}</strong></p> 
+		  <p>{{vacina.desc}}</p>
+		  <span style="color:#999"> <i class="icon ion-ios-arrow-right"></i> </span>
+		</a>
+	</div>	
+    
+	<br/>
+		
+		
+  </ion-content>
+</ion-view>

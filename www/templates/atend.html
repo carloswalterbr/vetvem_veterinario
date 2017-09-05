@@ -1,0 +1,22 @@
+﻿<ion-view view-title={{pagetitle}}>
+  
+  <ion-content class="" data-ng-init="local()">
+        <div id="map">
+            map...
+        </div>
+	<div style="padding-left:10%;padding-right:10%;padding-top:3%; text-align:left">
+		<h4 style="color:#777">
+		{{data[0].end}}
+		<span style="font-size:3.5vmin"><br/>
+		{{data[0].end2}}
+		</span>
+		</h4>
+		<button class="button button-block custom" type="button" ng-click="showConfirm()">{{tipoatend}} URGENTE</button>
+		<button class="button button-block custom" type="button" ng-click="goahead()">{{tipoatend}} AGENDADA</button> 
+	</div>
+	<span ng-repeat="x in vm"> 
+	{{x.}}
+	</span>
+	
+  </ion-content>
+</ion-view>

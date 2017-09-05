@@ -1,0 +1,37 @@
+﻿<ion-view view-title={{viewTitle.toUpperCase()}}>
+    <ion-nav-title> {{viewTitle.toUpperCase()}} </ion-nav-title>
+	<ion-nav-buttons side="secondary">
+		<button class="button icon-right ion-refresh button-calm custom" ng-click="refresh()" ng-show="btmes"></button>
+		<button class="button icon-right {{bticon}} button-calm custom"  ng-click="btcalendar()"></button>
+    </ion-nav-buttons>
+	
+  <ion-content class="">
+			
+		<div class="left" ng-show="weekview">			
+            <button class="button {{btuma}} f35 {{classuma}}" 
+					ng-click="tipomarca(0)"					
+					>Uma vez</button>
+			<button class="button {{btrep}} f35 {{classrep}}" 
+					ng-click="tipomarca(1)"
+					>Repetir</button>			
+		</div>
+		
+		<calendar 	ng-model="calendar.currentDate" 
+					calendar-mode="calendar.mode" 
+					event-source="calendar.eventSource"
+					range-changed="reloadSource(startTime, endTime)"
+					event-selected="onEventSelected(event)" 
+					title-changed="onViewTitleChanged(title)"
+					time-selected="onTimeSelected(selectedTime, events)"
+					step="30" 
+					style="height:{{altura}}vmax; border:2px solid #fba919"
+					>
+		</calendar>	
+		
+		<div class="item" style="padding: 0 5% 0 5%" ng-show="weekview"> 
+			<button class="button button-block custom" type="button" ng-disabled="btdisabled" ng-click="salvar(false)">SALVAR</button>
+		</div>
+
+		
+  </ion-content>
+</ion-view>

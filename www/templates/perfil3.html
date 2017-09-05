@@ -1,0 +1,28 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="fundoCinza">
+	<div style="background-color:#efefef">
+			<br/>
+	<form name="myForm" ng-submit="doCadastro()" style="background-color:#efefef">
+	  <div class="" style="padding-left:10%; padding-right:10%">
+		<label class="item item-input">
+		  <!-- Na imagem o campo Banco está como lista -->
+		  <select class="select95" ng-model = "data.str_vet_banco" required>
+			<option ng-repeat="bco in bancos" >{{bco.nome}}</option>
+		  </select>
+		</label>
+		<label class="item item-input">
+		  <input type="text" placeholder="Agência" ng-model="data.str_vet_agc" required> 
+		</label>
+		<label class="item item-input">
+		  <input type="text" placeholder="Conta" ng-model="data.str_vet_cc" required> 
+		</label>
+		</br>
+		  <!-- Falta ajustar o botão para passar para a próima pagina. -->
+		  <button class="button button-block custom" type="submit" ng-click="salvar()" ng-disabled="(!myForm.$valid||myForm.$error.required)">SALVAR</button>
+		<br/>
+		<br/>
+	  </div>
+	</form>
+	</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,74 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+<div style="background: linear-gradient(#ff9500 50%, white 50%); height: 65vw; z-index: -1; text-align: center;">
+				<div style="position: relative;">
+					<div style="height: 7.5vw"></div>
+					<a menu-close href="#/app/perfil">
+					<img id="myImage" class="avatar" src="{{foto}}" style="width: 50vw; height: 50vw" > 
+					<span style="right:0; top:0;position:absolute; padding-top:3vmin; padding-right:3vmin;">
+					</span>
+					</a>
+				</div>
+		</div>
+	<form ng-submit="doCadastro()" style="background-color:#efefef">
+	  <div class="" style="padding-left:10%; padding-right:10%">
+		<button class="button button-block custom" type="button" ng-click="novafoto()">ESCOLHER FOTO</button>
+		<label class="item item-input">
+		  <input type="text" placeholder="Nome" ng-model="data.str_vet_nome"> 
+		</label>
+			<!-- PLACEHOLDER do data não está bacaninha use do walter -->
+		<label class="item item-input" ng-click="hidetitlenasc()" >
+			<input type="text" placeholder="Data de nascimento" ng-hide="shownasc" ng-model="datetemp"> 
+		  <input name="nasc" type="date" placeholder="01/01/01" ng-model="data.dt_vet_nascimento" ng-show="shownasc"> 
+			<i class="fa fa-calendar " style="color:#777"  ></i>&nbsp;&nbsp;&nbsp;
+		</label>
+		<label class="item item-input">
+			<input type="number" placeholder="Celular" ng-model="data.str_vet_cellphone">
+		</label>
+		<label class="item item-input">
+		  <input type="text" placeholder="e-mail" ng-model="data.str_vet_email">   
+		</label>
+		<label class="item item-input">
+		  <input type="text" placeholder="CPF" ng-model="data.str_vet_cpf"> 
+		</label>
+		<label class="item item-input">
+		  <input type="text" placeholder="BIO" ng-model="data.str_vet_bio"> 
+		</label>
+		<label class="item item-input">
+		  <input type="text" style="max-width:50%;" placeholder="Número CMRV" ng-model="data.str_vet_crmv"> 
+		  <select ng-model = "data.str_vet_crmvuf" required><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select> 
+		</label>
+		<label class="item item-input"> 
+		  <!--<input type="text" placeholder="Especialidade" ng-model="data.int_spec_id">  	<br/>			-->
+		  <select class="select95" id="spc" ng-model = "myspec" required>
+			<option ng-repeat="esp in especs" >{{esp.str_spec_nome}}</option> 
+		  </select>
+		</label>
+		<label class="item item-input">
+		  <input type="text" placeholder="Endereço" ng-model="data.str_vet_address"> 
+		</label>
+		<label class="item item-input">
+		  <select ng-model = "data.str_vet_uf" required><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select> 
+		  &nbsp;&nbsp;&nbsp;<input type="text" placeholder="Cidade" ng-model="data.str_vet_cidade"> 
+		</label>
+		
+		<label class="item item-input">
+			<div style="width:100%; text-align:center">
+			<div class="center"> Atendimento</div >
+			<div class="range range-assertive" >0
+				<input id="dist" id="slide" type="range" min="0" max="100" step="1" pin="true" ng-model="dist"> 100
+			</div>
+			<div class="center"> {{dist}} km </div >
+			</div>
+		</label>
+		
+		  <button class="button button-block custom" type="button" ng-click="salva()">SALVAR</button>
+		  <button class="button button-block custom" type="button" ng-click="documents()">DOCUMENTOS</button>
+		  <button class="button button-block custom" type="button" ng-click="dadosBanc()">DADOS BANCARIOS</button>
+		<br/>
+		<br/>
+	  </div>
+	</form>
+	</div>
+  </ion-content>
+</ion-view>

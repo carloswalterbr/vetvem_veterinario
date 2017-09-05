@@ -1,0 +1,24 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+	
+	<!-- lista de solicitações -->
+	<div class="list" >
+		<a class="item item-avatar2 item-icon-right" ng-repeat="solicit in data" href="#/app/solicitacao/{{solicit.num}}"> 
+		  <img src="{{solicit.image}}" >
+		  <div class="row">
+				<div class="col col-list1" >
+				  <p><span style="; color:#fba919;">{{solicit.nome}} </span></p> 
+				  <p>{{solicit.spec}}</p>
+				  <h4>{{solicit.datahora}}</h4>
+					<span class="tvert"> </span>
+				</div>
+				<div class="col">
+					<span class="m2"> {{solicit.valor}} </span>
+				</div>
+			</div>
+			  <span style="color:#999"> <i class="icon ion-ios-arrow-right"></i> </span>
+		</a>
+	</div>	
+		
+  </ion-content>
+</ion-view>

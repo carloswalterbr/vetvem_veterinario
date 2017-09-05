@@ -1,0 +1,31 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+	<div style="width:100%; background-color:#efefef; text-align:center">
+		<br/>
+		<div ng-click="mudarfoto()">			
+			<img src="img/MolduraFoto.jpg" style="width:25vmin"> 
+		</div>
+		<br/>
+		<span style="font-size: 5vmin;color:#777"> Nome do usu&aacute;rio </span>
+		<br/>
+		<span style="color:#777"> Cidade, estado </span> 
+		<BR/>
+		<BR/>
+	</div>
+	
+	<!-- lista de animais -->
+	<div class="list" >
+		<a class="item item-avatar item-icon-right" ng-repeat="animal in data" href="#/app/cadanimal/{{animal.num}}"> 
+		  <img src="{{animal.image}}" >
+		  <h2><span style="color:red">{{animal.nome}} </span></h2>
+		  <p>{{animal.tipo}}, {{animal.raca}}</p>
+		  <span style="color:#999"> <i class="icon ion-ios-arrow-right"></i> </span>
+		</a>
+	</div>	
+	
+	<div class="" style="padding:10%">
+	  <button class="button button-block custom" type="button" ng-click="cadanimal()">CADASTRAR ANIMAL</button>
+	</div>
+	
+  </ion-content>
+</ion-view>

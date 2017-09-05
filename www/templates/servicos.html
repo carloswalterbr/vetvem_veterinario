@@ -1,0 +1,186 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+
+	<form name="myForm">
+	<div class="list" >
+		<div class="item"> 
+			<div class="row" > 
+				<div class="col" style="max-width:25vmin" >
+					<img src="img/Consultas_Icone.jpg" style="width:18vmin; padding-left:6%">
+				</div>
+				<div class="col" >
+					<span class="txtvertalign">Consulta </span>
+				</div>
+				<div class="col" style="max-width:5vmin" >
+					<br/>
+					<span style="font-size:3vmin; color:#000">R$ </span>
+				</div>
+				<div class="col"  style="max-width:22vmin">
+					<br/>
+					<input type="tel" style="border: 1px solid #999; max-width:20vmin; max-height:4vmax " ng-model="data.flo_serv_consulta" ng-pattern="/^[0-9]{1,7}(\.[0-9]+)?$/"  formatamoeda>             
+				</div>
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="row">
+				<div class="col" style="max-width:25vmin" >
+					<img src="img/Curativos_Icone.jpg" style="width:18vmin; padding-left:6%">
+				</div>
+				<div class="col" >
+					<span class="txtvertalign">Curativos </span>
+				</div>
+				<div class="col" style="max-width:5vmin" >
+					<br/>
+					<span style="font-size:3vmin; color:#000">R$ </span>
+				</div>
+				<div class="col"  style="max-width:22vmin">
+					<br/>
+					<input name="myDecimal" type="tel" style="border: 1px solid #999; max-width:20vmin; max-height:4.0vmax " ng-model="data.flo_serv_curativo" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01"  formatamoeda>
+				</div>
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="row">
+				<div class="col" style="max-width:25vmin" >
+					<img src="img/AdministracaoDeMedicamentos_Icone.jpg" style="width:18vmin; padding-left:6%">
+				</div>
+				<div class="col " >
+					<span class="wrapword txtvertalign2" >Administração de Medicamentos </span>
+				</div>
+				
+				<div class="col" style="max-width:5vmin" >
+					<br/>
+					<span style="font-size:3vmin; color:#000">R$ </span>
+				</div>
+				
+				<div class="col" style="max-width:22vmin">
+					<br/>
+					<input type="tel" style="border: 1px solid #999; max-width:20vmin; max-height:4vmax " ng-model="data.flo_serv_admin" formatamoeda>
+				</div>
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="row">
+				<div class="col" style="max-width:25vmin" >
+					<img src="img/AdministracaoDeMedicamentos_Icone.jpg" style="width:18vmin; padding-left:6%">
+				</div>
+				<div class="col" >
+					<span class="txtvertalign">Exames </span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" style="min-width:54.25vmin" >
+					<input type="checkbox" ng-model="data.statusfezes">
+					<span style="font-size:4vmin; color:#000" > Fezes </span> 
+				</div>
+				<div class="col" style="max-width:5vmin" >
+					<span style="font-size:3vmin; color:#000">R$ </span>
+				</div>
+				<div class="col" >
+					<input type="tel" style="border: 1px solid #999; max-width:20vmin; max-height:4vmax " ng-model="data.flo_serv_fezes" formatamoeda>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" style="min-width:54.25vmin" >
+					<input type="checkbox" ng-model="data.statusurina">
+					<span style="font-size:4vmin; color:#000" > Urina </span> 
+				</div>
+				<div class="col" style="max-width:5vmin" >
+					<span style="font-size:3vmin; color:#000">R$ </span>
+				</div>
+				<div class="col" >
+					<input type="tel" style="border: 1px solid #999; max-width:20vmin; max-height:4vmax " 
+					ng-model="data.flo_serv_urina" formatamoeda> 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" style="min-width:54.25vmin" >
+					<input type="checkbox" ng-model="data.statussangue">
+					<span style="font-size:4vmin; color:#000"  > Sangue </span> 
+				</div>
+				<div class="col" style="max-width:5vmin" >
+					<span style="font-size:3vmin; color:#000">R$ </span>
+				</div>
+				<div class="col" >
+					<input type="tel" style="border: 1px solid #999; max-width:20vmin; max-height:4vmax " ng-model="data.flo_serv_sangue" formatamoeda>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col" style="min-width:54.25vmin" >
+					<input type="checkbox" ng-model="data.statusraspado">
+					<span style="font-size:4vmin; color:#000"  ng-model="data.bol_serv_raspado"> Raspado de pele </span>
+				</div>
+				<div class="col" style="max-width:5vmin" >
+					<span style="font-size:3vmin; color:#000">R$ </span>
+				</div>
+				<div class="col" >
+					<input type="tel" style="border: 1px solid #999; max-width:20vmin; max-height:4vmax " ng-model="data.flo_serv_raspado" formatamoeda>
+				</div>
+			</div>
+		</div>
+		<div class="item"> 
+			
+			<div class="row">
+				<div class="col" style="max-width:25vmin" >
+					<img src="img/Vacinas_Icone.jpg" style="width:18vmin; padding-left:6%">
+				</div>
+				<div class="col" >
+					<br/>
+					<span style="font-size:4vmin; color:#000">Vacinas </span>
+				</div>
+			</div>
+			
+			<div class="row" style="padding-top:3%">
+				<div class="col center" style="background-color:#404040; color:#fff; min-width:90%;" >
+					<span>Vacinas para cães</span>
+				</div>
+				<div class="col center" ng-click="mostraCao()" style="background-color:#fba919; color:#fff" > +
+				</div>
+			</div>
+		
+			<!---->
+			<div >
+				<div class="row" 	style="border-bottom:1px solid #999; padding-top:3%"
+									ng-repeat="v in vacinas | filter:{int_vac_especie:0, int_status_id:1} track by v.int_vac_id " 
+									ng-click="alteraVacina(v.int_vac_id,v.str_vac_nome,v.flo_vac_preco)"> 
+					<div class="col wrapword" >  
+						{{v.str_vac_nome}}	
+					</div>
+					<div class="col" style="color: #fba919;text-align:right; max-width:25%">
+						{{v.flo_vac_preco.toFixed(2)}}
+					</div>
+				</div>				
+			</div>
+			
+			<div class="row" style="padding-top:3%">
+				<div class="col center" style="background-color:#404040; color:#fff; min-width:90%" >
+					<span>Vacinas para gatos</span>
+				</div>
+				<div class="col center" ng-click="mostraGato()" style="background-color:#fba919; color:#fff" > +
+				</div>
+			</div>
+			
+			<!---->
+			<div >
+				<div class="row" 	style="border-bottom:1px solid #999; padding-top:3%"
+									ng-repeat="v in vacinas | filter:{int_vac_especie:1, int_status_id:1} track by v.int_vac_id " 
+									ng-click="alteraVacina(v.int_vac_id,v.str_vac_nome,v.flo_vac_preco)"> 
+					<div class="col wrapword" >  
+						{{v.int_vac_id}}-{{v.str_vac_nome}}	
+					</div>
+					<div class="col" style="color: #fba919;text-align:right; max-width:25%">
+						{{v.flo_vac_preco.toFixed(2)}}
+					</div>
+				</div>				
+			</div>
+		</div>
+		
+		<div class="item" style="padding: 0 5% 0 5%"> 
+			<button class="button button-block custom" type="button" ng-click="gravaservicos()">SALVAR</button>
+		</div>
+				
+	</div>
+	</form>
+		
+  </ion-content>
+</ion-view>

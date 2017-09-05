@@ -1,0 +1,40 @@
+﻿<ion-view view-title={{pagetitle}}>
+  <ion-content class="">
+
+	<div class="item"> 
+		<div class="row">
+			<div class="col col-67 orangecustom f50" >
+				<span> Faturamento
+				</span>
+				<span class="grey f35"> / 12 meses
+				</span>
+			</div>
+		</div>
+	
+		<div style="padding:5%">
+			<canvas id="myChart" width="400" height="300"></canvas>  
+		</div>
+	</div>
+
+	<div class="item"> 
+		<div class="row">
+			<div class="col col-67 orangecustom f50" >
+				<span> Faturamento
+				</span>
+				<span class="grey f35"> / Últimos 30 dias
+				</span>
+			</div>
+			<div class="col orangecustom f60">
+				<span> R$ {{data[0].tot30}}
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	<div style="padding:5%">
+		<canvas id="myChart2" width="400" height="400"></canvas>  
+	</div>
+
+	
+  </ion-content>
+</ion-view>
