@@ -1,4 +1,3 @@
-
 var app = angular.module('app', ['ionic', 'app.controllers','app.routes','app.services','ui.rCalendar', 'ngAnimate'])
 
 app.run(function($ionicPlatform, $ionicPopup, $state, $ionicHistory, $ionicSideMenuDelegate) {
@@ -65,17 +64,8 @@ app.value('cwvars' , {
 });
 
 app.value('myhost' , { url:'http://carloswalter.com/170160290794/'}); // <--- substituir pela do cliente
-//app.value('myhost' , { url:'http://vetvem.com.br/admin/mobile/'}); 
+	//app.value('myhost' , { url:'http://vetvem.com.br/admin/mobile/'}); 
 
 app.value('mydata' , {});
 app.value('vacinas', {});
-
-
-
-
-
-
-
-
-
 

@@ -103,6 +103,8 @@ angular.module('app.controllers', [])
 				$scope.loading = false;
 			});
 	}
+
+	/*
 	// obtem as coordenadas do endereço de cadastro do cliente
 	$scope.map = function() {
 		server.coords()
@@ -128,12 +130,16 @@ angular.module('app.controllers', [])
 					myFactory.aviso("Algo saiu errado. ("+response.status+")");		
 			})
 	};
+	*/
 	
     // mostra as coordenadas recebidas pela solicitação urgente
+	/*
 	$scope.mapForUrgentPosition = function() {
         // chama function em cwmaps.js    
         getMap($scope.data.flo_cli_lat, $scope.data.flo_cli_long);
 	};
+	*/
+
     //
 	$scope.aceita = function(tipo) {
 		//$scope.url = myhost.url+'vetaceita.php?s='+$stateParams.num+'&t='+tipo;
@@ -343,8 +349,8 @@ angular.module('app.controllers', [])
 })
 
 
-//-------------------------------------------------------------------------------------------------------------------
-.controller('menuCtrl', function($scope, $stateParams, $ionicPopup, cwvars, $rootScope, myFactory, myhost, server) {
+//--------------------------------------------------------------------------------------------------------------------------
+.controller('menuCtrl', function($scope, $stateParams, $ionicPopup, cwvars, $rootScope, myFactory, myhost, server, $state) {
 		$scope.$on('$ionicView.enter', function(e) {$scope.home();}); 
 		//
 		$scope.logout = function() { 
@@ -359,7 +365,7 @@ angular.module('app.controllers', [])
 			$scope.nome = cwvars.username;
 			$scope.end  = cwvars.userespec+' - '+cwvars.cidade+', '+cwvars.uf;
 			$scope.foto = cwvars.userimage;
-            if ($state.current.name=='home') {
+            if ($state.current.name=='app.home') {
     			// existem consultas a confirmar?
     			$scope.url = myhost.url+'vetsolicit.php?i='+myFactory.prepareNum(cwvars.userid);
     			server.send($scope.url).success(function(data) {
@@ -410,11 +416,14 @@ angular.module('app.controllers', [])
         }
     });
     
+    // ----------------------------------------------------------
 	$scope.$on('$ionicView.enter', function(e) {$scope.home();});
+	//
 	$scope.pagetitle = "HOME";
 	$scope.aconfirmar = false;
 	$scope.qtde = 0;
-	//
+
+	// ------------------------
 	$scope.home = function() {
 		$scope.aconfirmar = false;
 		$scope.qtde = 0;
@@ -492,18 +501,22 @@ angular.module('app.controllers', [])
 
 //------------------------------------------------------------------------------------------------------------------------
 .controller('cadastroCtrl', function($scope, $stateParams, myhost, cwvars, server, $state, myFactory, $ionicActionSheet) {  
+	
 	$scope.$on('$ionicView.enter', function(e) {$scope.inicio();});
+	//
 	$scope.pagetitle = "Criar Conta";
     $scope.data = {};    
 	$scope.id = 0;
 	$scope.datetemp = "mm/dd/aaaa";
 	$scope.shownasc = false;
 	$scope.foto = false;
-	//
+	
+	// ------------------------------------
 	$scope.hidetitlenasc = function() {
 		$scope.shownasc = true;
 	}
-	//
+	
+	// -------------------------
 	$scope.inicio = function() { 
 		$scope.imgfoto = 'img/MolduraFoto2.jpg';
 		$scope.dist = 50;
@@ -550,7 +563,7 @@ angular.module('app.controllers', [])
 		return dt2;
 	}	
 	
-	// cadastro 1 - dados 
+	// ------------------------ cadastro 1 - dados 
 	$scope.salva = function() {
 		/*
 				cwvars.userid = 8;
